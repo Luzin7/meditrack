@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.victor.meditrack.domain.Professional;
 
 public interface ProfessionalRepository extends JpaRepository<Professional, String> {
-  Optional<Professional> findByProfessionalId(String id);
+  Optional<Professional> findById(String id);
 
-  Optional<Professional> findByProfessionalEmail(String email);
+  Optional<Professional> findByEmail(String email);
 }
