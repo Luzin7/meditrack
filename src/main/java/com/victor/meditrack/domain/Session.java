@@ -35,12 +35,6 @@ public class Session {
   private String startsAt;
 
   @Column(nullable = false)
-  private String patientId;
-
-  @Column(nullable = false)
-  private String professionalId;
-
-  @Column(nullable = false)
   private String duration;
 
   @Column(nullable = false)
