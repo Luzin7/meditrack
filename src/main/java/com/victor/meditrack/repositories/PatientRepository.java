@@ -1,13 +1,16 @@
 package com.victor.meditrack.repositories;
 
+import java.util.List;
 import java.util.Optional;
-
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.victor.meditrack.domain.Patient;
 
-public interface PatientRepository extends JpaRepository<Patient, String> {
-  Optional<Patient> findByPatientId(String id);
+public interface PatientRepository {
+  void createPatient(String name, String email);
 
-  Optional<Patient> findByPatientEmail(String email);
+  List<Patient> findAll();
+
+  Optional<Patient> findById(String id);
+
+  Optional<Patient> findByEmail(String email);
 }
