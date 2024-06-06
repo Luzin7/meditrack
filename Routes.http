@@ -1,0 +1,11 @@
+### Get patients
+GET http://localhost:8080/patients
+
+### Create a new patients
+POST http://localhost:8080/patients
+content-type: application/json
+
+{
+    "name": "Ryan Gosling",
+    "email": "email@email.com"
+}
