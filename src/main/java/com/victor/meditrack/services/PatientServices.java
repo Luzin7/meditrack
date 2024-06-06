@@ -15,8 +15,11 @@ public class PatientServices {
     this.patientRepository = patientRepository;
   }
 
-  public void createPatient(String name, String email) {
-    patientRepository.createPatient(name, email);
+  public Patient createPatient(String name, String email) {
+    Patient patient = new Patient();
+    patient.setName(name);
+    patient.setEmail(email);
+    return patientRepository.save(patient);
   }
 
   public List<Patient> getPatients() {
